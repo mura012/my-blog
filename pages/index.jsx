@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import icon from "./image/twittericon.jpg";
+import icon from "../image/twittericon.jpeg";
 import Twitter from "../image/Twitter logo/PNG/2021 Twitter logo - blue.png";
 import Image from "next/image";
 import Link from "next/link";
