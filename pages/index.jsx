@@ -14,10 +14,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <Image src={icon} width={30} height={30}></Image>
+        <Image src={icon} alt="icon" width={30} height={30}></Image>
         <Link href="https://twitter.com/most_love08">
           <a>
-            <Image src={Twitter} width={32} height={32}></Image>
+            <Image
+              src={Twitter}
+              alt="twittericon"
+              width={32}
+              height={32}
+            ></Image>
           </a>
         </Link>
         <Link href="./newArticles.jsx">
