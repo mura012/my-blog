@@ -17,12 +17,7 @@ export default function Home() {
         <Image src={icon} alt="icon" width={30} height={30}></Image>
         <Link href="https://twitter.com/most_love08">
           <a>
-            <Image
-              src={Twitter}
-              alt="twittericon"
-              width={32}
-              height={32}
-            ></Image>
+            <Image src={Twitter} alt="twittericon" width={32} height={32} />
           </a>
         </Link>
         <Link href="./newArticles.jsx">
