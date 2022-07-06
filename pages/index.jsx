@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import icon from "../image/twittericon.jpg";
+import icon from "./image/twittericon.jpg";
 import Twitter from "../image/Twitter logo/PNG/2021 Twitter logo - blue.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,7 +20,7 @@ export default function Home() {
             <Image src={Twitter} alt="twittericon" width={32} height={32} />
           </a>
         </Link>
-        <Link href="./newArticles.jsx">
+        <Link href="./newArticles">
           <a>新着記事</a>
         </Link>
       </header>
