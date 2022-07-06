@@ -5,7 +5,7 @@ import Twitter from "../image/Twitter logo/PNG/2021 Twitter logo - blue.png";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -26,4 +26,6 @@ export default function Home() {
       </header>
     </div>
   );
-}
+};
+
+export default Home;
