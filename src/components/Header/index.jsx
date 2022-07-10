@@ -18,7 +18,7 @@ const Header = () => {
         />
       </div>
       <div className={classes.linkWrapper}>
-        <Link href="https://twitter.com/most_love08">
+        {/* <Link href="https://twitter.com/most_love08">
           <a className={classes.link}>
             <p>@most_love08</p>
             <Image src={Twitter} alt="twittericon" width={30} height={30} />
@@ -29,7 +29,7 @@ const Header = () => {
             <p>most_love08</p>
             <Image src={Git} alt="giticon" width={30} height={30} />
           </a>
-        </Link>
+        </Link> */}
       </div>
     </header>
   );
