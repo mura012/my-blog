@@ -10,6 +10,7 @@
 }
 .image {
   border-radius: 400px;
+  cursor: pointer;
 }
 .p {
   font-size: 40px;

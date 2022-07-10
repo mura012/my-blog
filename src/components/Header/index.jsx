@@ -9,13 +9,15 @@ const Header = () => {
   return (
     <header className={classes.header}>
       <div className={classes.imageWrapper}>
-        <Image
-          src={Icon}
-          alt="icon"
-          className={classes.image}
-          width={80}
-          height={80}
-        />
+        <Link href="/">
+          <Image
+            src={Icon}
+            alt="icon"
+            className={classes.image}
+            width={80}
+            height={80}
+          />
+        </Link>
       </div>
       <div className={classes.linkWrapper}>
         <Link href="https://twitter.com/most_love08">
