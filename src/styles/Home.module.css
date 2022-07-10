@@ -8,7 +8,14 @@
   width: 800px;
   margin: 0 auto;
   margin-bottom: -1px;
-  /* margin-top: 10px; */
+}
+.linkWrapper:hover {
+  color: red;
+  text-decoration: underline;
+  transition: 0.5s;
+  box-shadow: 0 5px 5px gray;
+  margin-bottom: 5px;
+  background-color: rgb(237, 237, 237);
 }
 .linkImage {
   display: block;
