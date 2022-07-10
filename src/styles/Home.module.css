@@ -1,7 +1,17 @@
-.articlesLink {
-  border: black solid 1px;
+.wrapper {
 }
-
+.linkArticle {
+}
+.linkWrapper {
+  list-style: none;
+  border: black solid 1px;
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: -1px;
+  margin-top: 10px;
+}
+.linkImage {
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;

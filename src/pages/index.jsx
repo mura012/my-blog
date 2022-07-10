@@ -14,15 +14,19 @@ const Home = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main>
+      <main className={classes.wrapper}>
         <p>{`記事の総数: ${props.totalCount}件`}</p>
         <ul>
           {props.contents.map((content) => {
             return (
-              <li key={content.id}>
+              <li key={content.id} className={classes.linkWrapper}>
                 <Link href={`/blog/${content.id}`}>
-                  <a className={classes.articlesLink}>
-                    <img src={content.image.url} alt="画像" />
+                  <a className={classes.linkArticle}>
+                    <img
+                      src={content.image.url}
+                      alt="画像"
+                      className={classes.linkImage}
+                    />
                     {content.title}
                   </a>
                 </Link>
