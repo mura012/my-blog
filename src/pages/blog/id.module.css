@@ -1,0 +1,7 @@
+.blogWrapper {
+  width: 800px;
+  margin: 0 auto;
+  border-left: black solid 1px;
+  border-right: black solid 1px;
+  padding-left: 5px;
+}
