@@ -2,10 +2,14 @@ import Link from "next/link";
 import Header from "src/components/Header";
 import { client } from "/src/lib/client";
 import classes from "./id.module.css";
+import Head from "next/head";
 
 const BlogId = (props) => {
   return (
     <div>
+      <Head>
+        <title>{props.title}</title>
+      </Head>
       <Header />
       <div className={classes.blogWrapper}>
         <h1 className={classes.blogTitle}>{props.title}</h1>
