@@ -1,6 +1,5 @@
 .wrapper {
-}
-.linkArticle {
+  width: 100%;
 }
 .linkWrapper {
   list-style: none;
@@ -10,19 +9,23 @@
   margin-bottom: -1px;
 }
 .linkWrapper:hover {
-  color: red;
-  text-decoration: underline;
   transition: 0.5s;
   box-shadow: 0 5px 5px gray;
   margin-bottom: 5px;
   background-color: rgb(237, 237, 237);
 }
+.linkAnchor {
+  font-weight: bold;
+}
+.linkAnchor:hover {
+  color: red;
+  text-decoration: underline;
+}
 .linkImage {
   display: block;
 }
-@media (max-width: 600px) {
-  .grid {
+@media (max-width: 520px) {
+  .linkWrapper {
     width: 100%;
-    flex-direction: column;
   }
 }
