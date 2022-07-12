@@ -2,8 +2,6 @@ import classes from "./Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import Icon from "/image/twittericon.png";
-import Twitter from "/image/Twitter logo/PNG/2021 Twitter logo - white.png";
-import Git from "/image/github_icon.png";
 
 const Header = () => {
   return (
@@ -18,20 +16,20 @@ const Header = () => {
             height={80}
           />
         </Link>
-      </div>
-      <div className={classes.linkWrapper}>
-        <Link href="https://twitter.com/most_love08">
-          <a className={classes.link}>
-            <p>@most_love08</p>
-            <Image src={Twitter} alt="twittericon" width={30} height={30} />
-          </a>
-        </Link>
-        <Link href="https://github.com/mura012">
-          <a className={`${classes.link} ${classes.git}`}>
-            <p>most_love08</p>
-            <Image src={Git} alt="giticon" width={30} height={30} />
-          </a>
-        </Link>
+        <div className={classes.headerLink}>
+          <Link href="/">
+            <h2 className={classes.title}>Home</h2>
+          </Link>
+          <Link href="/blog">
+            <h2 className={classes.title}>Blog</h2>
+          </Link>
+          <Link href="/portfolio">
+            <h2 className={classes.title}>Portfolio</h2>
+          </Link>
+          <Link href="/plofile">
+            <h2 className={classes.title}>Plofile</h2>
+          </Link>
+        </div>
       </div>
     </header>
   );

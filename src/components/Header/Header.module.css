@@ -1,39 +1,29 @@
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: lightblue;
+  background-color: rgb(128, 213, 247);
 }
 .imageWrapper {
   margin-left: 30px;
   display: flex;
   align-items: center;
+  flex-direction: row;
 }
 .image {
   border-radius: 400px;
   cursor: pointer;
 }
-.p {
-  font-size: 40px;
-  letter-spacing: 1rem;
-  padding-left: 1rem;
-}
-.link {
+.headerLink {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  background-color: rgb(87, 163, 227);
-  color: white;
-  height: 40px;
-  margin-top: 3rem;
-  border-radius: 20px;
-  padding: 10px;
+  padding-right: 10px;
 }
-.linkWrapper {
-  display: flex;
-  margin-right: 5%;
-  margin-bottom: 3%;
+.title {
+  display: inline-block;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-.git {
-  background-color: gray;
+.title:hover {
+  border-bottom: 1px solid rgba(192, 192, 192, 0.3);
+  opacity: 0.5;
 }
