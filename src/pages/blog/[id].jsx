@@ -11,7 +11,7 @@ const BlogId = (props) => {
         <h1 className={classes.blogTitle}>{props.title}</h1>
         <time>{props.publishedAt}</time>
         <div dangerouslySetInnerHTML={{ __html: props.body }} />
-        <Link href="/">
+        <Link href="/blog">
           <a>戻る</a>
         </Link>
       </div>
