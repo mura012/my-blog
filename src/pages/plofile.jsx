@@ -1,6 +1,6 @@
 import Header from "src/components/Header";
 
-const Portfolio = () => {
+const Profile = () => {
   return (
     <>
       <Header />
@@ -9,4 +9,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Profile;
