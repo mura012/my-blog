@@ -1,7 +1,7 @@
-import Footer from "src/components/footer/Footer";
-import Header from "src/components/Header";
+import { Footer } from "src/components/footer/Footer";
+import { Header } from "src/components/Header";
 
-const Profile = () => {
+const Plofile = () => {
   return (
     <>
       <Header />
@@ -22,4 +22,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Plofile;

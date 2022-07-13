@@ -1,7 +1,7 @@
 import Link from "next/link";
 import classes from "src/styles/Home.module.css";
 import { client } from "src/lib/client";
-import Header from "src/components/Header";
+import { Header } from "src/components/Header";
 
 const Blog = (props) => {
   return (

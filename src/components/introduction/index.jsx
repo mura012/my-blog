@@ -4,7 +4,7 @@ import classes from "./Introduction.module.css";
 import Twitter from "image/Twitter logo/PNG/2021 Twitter logo - white.png";
 import Git from "image/github_icon.png";
 
-const Introduction = () => {
+export const Introduction = () => {
   return (
     <div className={classes.introduction}>
       <h1>武良 (most_love)</h1>
@@ -36,5 +36,3 @@ const Introduction = () => {
     </div>
   );
 };
-
-export default Introduction;

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Icon from "/image/twittericon.png";
 
-const Header = () => {
+export const Header = () => {
   return (
     <header className={classes.header}>
       <div className={classes.imageWrapper}>
@@ -34,5 +34,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;

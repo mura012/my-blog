@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Footer from "src/components/footer/Footer";
-import Introduction from "src/components/introduction";
-import Links from "src/components/main";
+import { Footer } from "src/components/footer/Footer";
+import { Introduction } from "src/components/introduction";
+import { Links } from "src/components/main";
 
 const Home = (props) => {
   console.log(props.contents);

@@ -6,7 +6,7 @@ import portfolio from "image/light.png";
 import plofile from "image/human.png";
 import Icon from "/image/twittericon.png";
 
-const Links = () => {
+export const Links = () => {
   return (
     <nav className={classes.nav}>
       <Link href="/">
@@ -47,5 +47,3 @@ const Links = () => {
     </nav>
   );
 };
-
-export default Links;

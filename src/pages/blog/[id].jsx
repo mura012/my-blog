@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Header from "src/components/Header";
-import { client } from "/src/lib/client";
-import classes from "./id.module.css";
 import Head from "next/head";
+import { Header } from "src/components/Header";
+import { client } from "src/lib/client";
+import classes from "./id.module.css";
 
 const BlogId = (props) => {
   return (
