@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
-import { Header } from "src/components/Header";
+import { Header } from "src/components/header";
 import { client } from "src/lib/client";
 import classes from "./id.module.css";
 

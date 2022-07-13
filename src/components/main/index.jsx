@@ -3,7 +3,7 @@ import Link from "next/link";
 import classes from "./Main.module.css";
 import blog from "image/creative.png";
 import portfolio from "image/light.png";
-import plofile from "image/human.png";
+import profile from "image/human.png";
 import Icon from "/image/twittericon.png";
 
 export const Links = () => {
@@ -35,11 +35,11 @@ export const Links = () => {
             </a>
           </div>
         </Link>
-        <Link href="/plofile">
+        <Link href="/profile">
           <div className={classes.linkWrapper}>
             <a className={classes.link}>
-              <Image src={plofile} alt="plofile" width={100} height={120} />
-              <p>Plofile</p>
+              <Image src={profile} alt="profile" width={100} height={120} />
+              <p>Profile</p>
             </a>
           </div>
         </Link>

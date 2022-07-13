@@ -26,8 +26,8 @@ export const Header = () => {
           <Link href="/portfolio">
             <h2 className={classes.title}>Portfolio</h2>
           </Link>
-          <Link href="/plofile">
-            <h2 className={classes.title}>Plofile</h2>
+          <Link href="/profile">
+            <h2 className={classes.title}>Profile</h2>
           </Link>
         </div>
       </div>
