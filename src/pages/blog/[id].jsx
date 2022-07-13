@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Header } from "src/components/Header";
 import { client } from "src/lib/client";
 import classes from "./id.module.css";
+import dayjs from "dayjs";
 
 const BlogId = (props) => {
   return (
@@ -13,7 +14,9 @@ const BlogId = (props) => {
       <Header />
       <div className={classes.blogWrapper}>
         <h1 className={classes.blogTitle}>{props.title}</h1>
-        <time>{props.publishedAt}</time>
+        <time dateTime={props.pblisheaAt}>
+          {dayjs(props.publishedAt).format("投稿日:YYYY年MM月DD日")}
+        </time>
         <div dangerouslySetInnerHTML={{ __html: props.body }} />
         <Link href="/blog">
           <a>戻る</a>
