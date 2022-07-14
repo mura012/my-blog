@@ -27,7 +27,6 @@ const Blog = (props) => {
   const contents = search ? search.contents : props.contents;
   const totalCount = search ? search.totalCount : props.totalCount;
 
-  console.log(search);
   return (
     <>
       <Header />
@@ -39,8 +38,9 @@ const Blog = (props) => {
             リセット
           </button>
         </form>
+
         <p className={classes.total}>{`${
-          search ? "検索結果" : "記事の総数"
+          totalCount ? "検索結果" : "記事の総数"
         }: ${totalCount}件`}</p>
         <ul>
           {contents.map((content) => {
