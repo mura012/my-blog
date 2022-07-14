@@ -4,6 +4,7 @@ import { Header } from "src/components/Header";
 import { client } from "src/lib/client";
 import classes from "./id.module.css";
 import dayjs from "dayjs";
+import { Footer } from "src/components/footer/Footer";
 
 const BlogId = (props) => {
   return (
@@ -22,6 +23,7 @@ const BlogId = (props) => {
           <a>戻る</a>
         </Link>
       </div>
+      <Footer />
     </div>
   );
 };

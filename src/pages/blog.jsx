@@ -3,6 +3,7 @@ import classes from "src/styles/Home.module.css";
 import { client } from "src/lib/client";
 import { Header } from "src/components/Header";
 import { useState } from "react";
+import { Footer } from "src/components/footer/Footer";
 
 const Blog = (props) => {
   const [search, setSearch] = useState();
@@ -32,7 +33,7 @@ const Blog = (props) => {
       <Header />
       <main className={classes.wrapper}>
         <form onSubmit={handleSubmit} className={classes.submit}>
-          <input type="text" name="query" />
+          <input type="text" name="query" placeholder="検索" />
           <button>検索</button>
           <button type="reset" onClick={handleClick}>
             リセット
@@ -60,6 +61,7 @@ const Blog = (props) => {
           })}
         </ul>
       </main>
+      <Footer />
     </>
   );
 };
