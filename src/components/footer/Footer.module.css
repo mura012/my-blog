@@ -1,2 +1,29 @@
+.footer {
+  height: 100px;
 
-  
+  border-top: 2px solid rgb(192, 192, 192);
+}
+.footerWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.question {
+  margin-top: 20px;
+  font-size: 16px;
+}
+.twitterLink {
+  color: #0000ee;
+  text-decoration: underline;
+}
+.twitterLink:hover {
+  color: #ff0000;
+  text-decoration: underline;
+}
+.twitterLink:active {
+  color: #ff0000;
+  text-decoration: underline;
+}
+.copyright {
+  margin-top: 30px;
+}
