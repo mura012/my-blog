@@ -6,3 +6,17 @@
   padding-top: 10px;
   padding-left: 5px;
 }
+.back {
+}
+.back {
+  color: #0000ee;
+  text-decoration: underline;
+}
+.back:hover {
+  color: #ff0000;
+  text-decoration: underline;
+}
+.back:active {
+  color: #ff0000;
+  text-decoration: underline;
+}

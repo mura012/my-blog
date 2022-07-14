@@ -20,7 +20,7 @@ const BlogId = (props) => {
         </time>
         <div dangerouslySetInnerHTML={{ __html: props.body }} />
         <Link href="/blog">
-          <a>戻る</a>
+          <a className={classes.back}>戻る</a>
         </Link>
       </div>
       <Footer />
