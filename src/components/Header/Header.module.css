@@ -1,9 +1,9 @@
 .header {
-  background-color: rgb(128, 213, 247);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 30px;
+  border-bottom: 2px solid rgb(192, 192, 192);
 }
 .image {
   border-radius: 400px;
@@ -20,6 +20,6 @@
   transition: 0.3s;
 }
 .title:hover {
-  border-bottom: 1px solid rgba(192, 192, 192, 0.3);
+  border-bottom: 1px solid rgb(192, 192, 192);
   opacity: 0.5;
 }
