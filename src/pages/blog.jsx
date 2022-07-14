@@ -31,14 +31,16 @@ const Blog = (props) => {
     <>
       <Header />
       <main className={classes.wrapper}>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={classes.submit}>
           <input type="text" name="query" />
           <button>検索</button>
           <button type="reset" onClick={handleClick}>
             リセット
           </button>
         </form>
-        <p>{`${search ? "検索結果" : "記事の総数"}: ${totalCount}件`}</p>
+        <p className={classes.total}>{`${
+          search ? "検索結果" : "記事の総数"
+        }: ${totalCount}件`}</p>
         <ul>
           {contents.map((content) => {
             return (
