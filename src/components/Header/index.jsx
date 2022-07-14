@@ -6,16 +6,16 @@ import Icon from "/image/twittericon.png";
 export const Header = () => {
   return (
     <header className={classes.header}>
+      <Link href="/">
+        <Image
+          src={Icon}
+          alt="icon"
+          className={classes.image}
+          width={80}
+          height={80}
+        />
+      </Link>
       <div className={classes.imageWrapper}>
-        <Link href="/">
-          <Image
-            src={Icon}
-            alt="icon"
-            className={classes.image}
-            width={80}
-            height={80}
-          />
-        </Link>
         <div className={classes.headerLink}>
           <Link href="/">
             <h2 className={classes.title}>Home</h2>
