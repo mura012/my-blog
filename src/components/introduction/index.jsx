@@ -26,8 +26,8 @@ export const Introduction = () => {
             <Image
               src={Git}
               alt="giticon"
-              width={30}
-              height={30}
+              width={35}
+              height={35}
               className={classes.linkIcon}
             />
           </a>
