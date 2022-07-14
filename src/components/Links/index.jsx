@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import classes from "./Main.module.css";
+import classes from "./Links.module.css";
 import blog from "image/creative.png";
 import portfolio from "image/light.png";
 import profile from "image/human.png";
@@ -13,8 +13,8 @@ export const Links = () => {
         <Image
           src={Icon}
           alt="icon"
-          width={100}
-          height={100}
+          width={80}
+          height={80}
           className={classes.icon}
         />
       </Link>
