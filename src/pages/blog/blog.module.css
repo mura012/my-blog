@@ -1,0 +1,41 @@
+.wrapper {
+  width: 100%;
+}
+.submit {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.total {
+  width: 800px;
+  margin: 0 auto;
+}
+.linkWrapper {
+  list-style: none;
+  border: black solid 1px;
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: -1px;
+}
+.linkWrapper:hover {
+  transition: 0.5s;
+  box-shadow: 0 5px 5px gray;
+  margin-bottom: 5px;
+  background-color: rgb(237, 237, 237);
+}
+.linkAnchor {
+  font-weight: bold;
+}
+.linkAnchor:hover {
+  color: red;
+  text-decoration: underline;
+}
+.linkImage {
+  display: block;
+}
+@media (max-width: 520px) {
+  .linkWrapper {
+    width: 100%;
+  }
+}

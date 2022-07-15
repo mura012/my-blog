@@ -30,7 +30,7 @@ const BlogId = (props) => {
 
 export const getStaticPaths = async () => {
   const data = await client.getList({ endpoint: "blog" });
-  const ids = data.contents.map((content) => `/blog/${content.id}`);
+  const ids = data.contents.map((content) => `/blogPage/${content.id}`);
   return {
     paths: ids,
     fallback: false,

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import classes from "src/styles/Home.module.css";
+import classes from "./blog.module.css";
 import { client } from "src/lib/client";
 import { Header } from "src/components/Header";
 import { useState } from "react";
@@ -50,7 +50,7 @@ const Blog = (props) => {
           {contents.map((content) => {
             return (
               <li key={content.id} className={classes.linkWrapper}>
-                <Link href={`/blog/${content.id}`} className={classes.link}>
+                <Link href={`/blogPage/${content.id}`} className={classes.link}>
                   <a className={classes.linkAnchor}>
                     <img
                       src={content.image.url}
