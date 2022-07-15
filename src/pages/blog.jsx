@@ -4,6 +4,7 @@ import { client } from "src/lib/client";
 import { Header } from "src/components/Header";
 import { useState } from "react";
 import { Footer } from "src/components/footer/Footer";
+import Head from "next/head";
 
 const Blog = (props) => {
   const [search, setSearch] = useState();
@@ -29,6 +30,9 @@ const Blog = (props) => {
 
   return (
     <>
+      <Head>
+        <title>myblog</title>
+      </Head>
       <Header />
       <main className={classes.wrapper}>
         <form onSubmit={handleSubmit} className={classes.submit}>
