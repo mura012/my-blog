@@ -18,7 +18,7 @@ const Blog = (props) => {
       body: JSON.stringify({ q }),
     });
     const json = await data.json();
-    setSearch(json);
+    json.contents != 0 ? setSearch(json) : alert("検索結果がありません");
   };
 
   const handleClick = () => {
@@ -43,9 +43,7 @@ const Blog = (props) => {
           </button>
         </form>
 
-        <p className={classes.total}>{`${
-          totalCount ? "検索結果" : "記事の総数"
-        }: ${totalCount}件`}</p>
+        <p className={classes.total}>{`記事の総数 : ${totalCount}件`}</p>
         <ul>
           {contents.map((content) => {
             return (
