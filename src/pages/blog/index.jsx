@@ -43,7 +43,9 @@ const Blog = (props) => {
           </button>
         </form>
 
-        <p className={classes.total}>{`記事の総数 : ${totalCount}件`}</p>
+        <p className={classes.total}>{`${
+          search ? "検索結果" : "記事の総数"
+        }: ${totalCount}件`}</p>
         <ul>
           {contents.map((content) => {
             return (
