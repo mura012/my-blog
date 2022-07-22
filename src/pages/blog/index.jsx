@@ -10,6 +10,7 @@ const Blog = (props) => {
   const [search, setSearch] = useState();
 
   const handleSubmit = async (event) => {
+    // イベントのデフォルトの挙動をキャンセル
     event.preventDefault();
     const q = event.currentTarget.query.value;
     const data = await fetch("/api/search", {
@@ -42,7 +43,6 @@ const Blog = (props) => {
             リセット
           </button>
         </form>
-
         <p className={classes.total}>{`${
           search ? "検索結果" : "記事の総数"
         }: ${totalCount}件`}</p>
