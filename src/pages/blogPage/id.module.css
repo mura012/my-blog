@@ -20,3 +20,9 @@
   color: #ff0000;
   text-decoration: underline;
 }
+@media (max-width: 520px) {
+  .blogWrapper {
+    width: 100%;
+    margin: 0;
+  }
+}
