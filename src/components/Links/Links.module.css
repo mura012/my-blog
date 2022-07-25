@@ -54,7 +54,7 @@
 
 @media (max-width: 480px) {
   .nav {
-    height: 100vh;
+    height: 800px;
   }
   .links {
     display: flex;
