@@ -3,18 +3,22 @@
 }
 .submit {
   display: flex;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
+
   margin: 0 auto;
   margin-top: 10px;
 }
 .total {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
 }
 .linkWrapper {
   list-style: none;
   border: black solid 1px;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
   margin-bottom: -1px;
 }

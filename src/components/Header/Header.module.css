@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 30px;
+  padding-left: 5vw;
   border-bottom: 2px solid rgb(192, 192, 192);
 }
 .image {
@@ -10,16 +10,22 @@
   cursor: pointer;
 }
 .headerLink {
-  padding-right: 10px;
+  margin-right: 5vw;
   display: flex;
 }
 .title {
   display: inline-block;
-  padding: 0 20px;
+  padding: 0 1vw;
   cursor: pointer;
   transition: 0.3s;
 }
 .title:hover {
   border-bottom: 1px solid rgb(192, 192, 192);
   opacity: 0.5;
+}
+
+@media (max-width: 520px) {
+  .headerLink {
+    font-size: 10px;
+  }
 }
