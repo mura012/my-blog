@@ -5,7 +5,7 @@ export const Footer = () => {
     <footer className={classes.footer}>
       <div className={classes.footerWrapper}>
         <p className={classes.question}>
-          何かあれば
+          連絡は
           <a
             href="https://twitter.com/most_love08"
             className={classes.twitterLink}
