@@ -7,13 +7,15 @@ export const Header = () => {
   return (
     <header className={classes.header}>
       <Link href="/">
-        <Image
-          src={Icon}
-          alt="icon"
-          className={classes.image}
-          width={80}
-          height={80}
-        />
+        <div className={classes.linkInImageWrapper}>
+          <Image
+            src={Icon}
+            alt="icon"
+            className={classes.image}
+            width={80}
+            height={80}
+          />
+        </div>
       </Link>
       <div className={classes.imageWrapper}>
         <div className={classes.headerLink}>
