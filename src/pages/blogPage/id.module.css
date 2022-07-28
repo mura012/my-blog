@@ -1,12 +1,14 @@
 .blogWrapper {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
   border-left: 2px solid rgb(192, 192, 192);
   border-right: 2px solid rgb(192, 192, 192);
   padding-top: 10px;
   padding-left: 5px;
 }
-.back {
+.body {
+  line-height: 1.9;
 }
 .back {
   color: #0000ee;

@@ -18,7 +18,10 @@ const BlogId = (props) => {
         <time dateTime={props.pblisheaAt}>
           {dayjs(props.publishedAt).format("投稿日:YYYY年MM月DD日")}
         </time>
-        <div dangerouslySetInnerHTML={{ __html: props.body }} />
+        <div
+          dangerouslySetInnerHTML={{ __html: props.body }}
+          className={classes.body}
+        />
         <Link href="/blog">
           <a className={classes.back}>戻る</a>
         </Link>
