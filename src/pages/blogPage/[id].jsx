@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Head from "next/head";
-import { Header } from "src/components/Header/";
+import { Header } from "src/components/Header";
 import { client } from "src/lib/client";
 import classes from "./id.module.css";
 import dayjs from "dayjs";
-import { Footer } from "src/components/Footer/";
+import { Footer } from "src/components/Footer";
 
 const BlogId = (props) => {
   return (
