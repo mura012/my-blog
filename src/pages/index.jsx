@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Footer } from "src/components/Footer";
+import { Footer } from "src/components/Footer/Footer";
 import { Introduction } from "src/components/Introduction";
 import { Links } from "src/components/Links";
 import classes from "src/styles/Home.module.css";
