@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Footer } from "src/components/footer/Footer";
-import { Header } from "src/components/Header";
+import { Header } from "src/components/Header/Header";
 
 const Portfolio = () => {
   return (

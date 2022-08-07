@@ -1,7 +1,7 @@
 import Link from "next/link";
 import classes from "./blog.module.css";
 import { client } from "src/lib/client";
-import { Header } from "src/components/Header";
+import { Header } from "src/components/Header/Header";
 import { useState } from "react";
 import { Footer } from "src/components/footer/Footer";
 import Head from "next/head";
