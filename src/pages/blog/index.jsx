@@ -3,7 +3,7 @@ import classes from "./blog.module.css";
 import { client } from "src/lib/client";
 import { Header } from "src/components/Header";
 import { useState } from "react";
-import { Footer } from "src/components/Footer/Footer";
+import { Footer } from "src/components/Footer";
 import Head from "next/head";
 
 const Blog = (props) => {
