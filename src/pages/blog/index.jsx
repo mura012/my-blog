@@ -4,7 +4,7 @@ import { client } from "src/lib/client";
 import { Header } from "src/components/Header";
 import { useState } from "react";
 import Head from "next/head";
-// import { Footer } from "src/components/Footer";
+import { Footer } from "src/components/Footer";
 
 const Blog = (props) => {
   const [search, setSearch] = useState();
@@ -65,7 +65,7 @@ const Blog = (props) => {
           })}
         </ul>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
