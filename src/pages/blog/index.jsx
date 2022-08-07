@@ -65,7 +65,7 @@ const Blog = (props) => {
           })}
         </ul>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

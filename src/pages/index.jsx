@@ -13,7 +13,7 @@ const Home = (props) => {
       </Head>
       <Links />
       {/* <Introduction /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
