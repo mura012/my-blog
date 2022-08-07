@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Header } from "src/components/Header";
-import { Footer } from "src/components/Footer";
+// import { Footer } from "src/components/Footer";
 
 const Portfolio = () => {
   return (
@@ -10,7 +10,7 @@ const Portfolio = () => {
       </Head>
       <Header />
       <p>作成中...</p>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
