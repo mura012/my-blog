@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import classes from "./Introduction.module.css";
-import Twitter from "image/Twitter logo/PNG/2021 Twitter logo - white.png";
-import Git from "image/github_icon.png";
+import Twitter from "src/image/Twitter logo/PNG/2021 Twitter logo - white.png";
+import Git from "src/image/github_icon.png";
 
 export const Introduction = () => {
   return (

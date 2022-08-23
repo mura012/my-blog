@@ -1,7 +1,7 @@
 import classes from "./Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import Icon from "/image/twittericon.png";
+import Icon from "src/image/twittericon.png";
 
 export const Header = () => {
   return (

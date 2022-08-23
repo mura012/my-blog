@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import classes from "./Links.module.css";
-import blog from "image/creative.png";
-import portfolio from "image/light.png";
-import profile from "image/human.png";
-import Icon from "/image/twittericon.png";
+import blog from "src/image/creative.png";
+import portfolio from "src/image/light.png";
+import profile from "src/image/human.png";
+import Icon from "src/image/twittericon.png";
 
 export const Links = () => {
   return (

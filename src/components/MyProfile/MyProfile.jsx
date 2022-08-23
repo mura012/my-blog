@@ -10,7 +10,7 @@ export const MyProfile = () => {
       <p className={classes.text}>2001年8月28日生まれ(20歳)</p>
       <h2 className={classes.h2}>出身地</h2>
       <p className={classes.text}>鳥取県境港市</p>
-      <h2 className={classes.h2}>技術スタック（レベル０）</h2>
+      <h2 className={classes.h2}>技術スタック</h2>
       <ol className={classes.ol}>
         <li className={classes.text}>▶HTML</li>
         <li className={classes.text}>▶CSS</li>
