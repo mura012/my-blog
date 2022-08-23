@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Footer } from "src/components/Footer";
+import { Footer } from "src/components/footer";
 import { Header } from "src/components/Header";
 
 const Portfolio = () => {
