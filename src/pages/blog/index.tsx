@@ -2,7 +2,7 @@ import Link from "next/link";
 import classes from "./blog.module.css";
 import { client } from "src/lib/client";
 import { Header } from "src/components/Header";
-import { FormEventHandler, useState } from "react";
+import { useState } from "react";
 import Head from "next/head";
 import { Footer } from "src/components/Footer";
 import { GetStaticProps, NextPage } from "next";
@@ -19,8 +19,6 @@ export type Blog = {
 };
 
 const Blog: NextPage<MicroCMSListResponse<Blog>> = (props) => {
-  console.log(props);
-
   const [search, setSearch] = useState<MicroCMSListResponse<Blog>>();
 
   const handleSubmit: ComponentProps<"form">["onSubmit"] = async (event) => {
