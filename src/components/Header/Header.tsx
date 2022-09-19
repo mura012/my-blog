@@ -3,7 +3,31 @@ import Image from "next/image";
 import Link from "next/link";
 import Icon from "src/image/twittericon.png";
 
+type Nav = {
+  link: string;
+  text: string;
+}[];
+
 export const Header = () => {
+  const NAVITEMS: Nav = [
+    {
+      link: "/",
+      text: "Home",
+    },
+    {
+      link: "/blog",
+      text: "Blog",
+    },
+    {
+      link: "/portfolio",
+      text: "Portfolio",
+    },
+    {
+      link: "/profile",
+      text: "Profile",
+    },
+  ];
+
   return (
     <header className={classes.header}>
       <Link href="/">
@@ -17,22 +41,19 @@ export const Header = () => {
           />
         </div>
       </Link>
-      <div className={classes.imageWrapper}>
-        <div className={classes.headerLink}>
-          <Link href="/">
-            <h2 className={classes.title}>Home</h2>
-          </Link>
-          <Link href="/blog">
-            <h2 className={classes.title}>Blog</h2>
-          </Link>
-          <Link href="/portfolio">
-            <h2 className={classes.title}>Portfolio</h2>
-          </Link>
-          <Link href="/profile">
-            <h2 className={classes.title}>Profile</h2>
-          </Link>
+      <nav className={classes.imageWrapper}>
+        <div className={classes.navLink}>
+          {NAVITEMS.map((navItem) => {
+            return (
+              <Link href={navItem.link} key={navItem.link}>
+                <a>
+                  <h2 className={classes.title}>{navItem.text}</h2>
+                </a>
+              </Link>
+            );
+          })}
         </div>
-      </div>
+      </nav>
     </header>
   );
 };
