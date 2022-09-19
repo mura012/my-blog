@@ -2,14 +2,28 @@ import Link from "next/link";
 import classes from "./blog.module.css";
 import { client } from "src/lib/client";
 import { Header } from "src/components/Header";
-import { useState } from "react";
+import { FormEventHandler, useState } from "react";
 import Head from "next/head";
 import { Footer } from "src/components/Footer";
+import { GetStaticProps, NextPage } from "next";
+import { MicroCMSListResponse } from "microcms-js-sdk";
+import { ComponentProps } from "react";
 
-const Blog = (props) => {
-  const [search, setSearch] = useState();
+export type Blog = {
+  id: string;
+  image: {
+    url: string;
+  };
+  title: string;
+  body: string;
+};
 
-  const handleSubmit = async (event) => {
+const Blog: NextPage<MicroCMSListResponse<Blog>> = (props) => {
+  console.log(props);
+
+  const [search, setSearch] = useState<MicroCMSListResponse<Blog>>();
+
+  const handleSubmit: ComponentProps<"form">["onSubmit"] = async (event) => {
     // イベントのデフォルトの挙動をキャンセル
     event.preventDefault();
     const q = event.currentTarget.query.value;
@@ -22,7 +36,7 @@ const Blog = (props) => {
     json.contents != 0 ? setSearch(json) : alert("検索結果がありません");
   };
 
-  const handleClick = () => {
+  const handleClick: ComponentProps<"button">["onClick"] = () => {
     setSearch(undefined);
   };
 
@@ -70,7 +84,9 @@ const Blog = (props) => {
   );
 };
 
-export const getStaticProps = async (ctx) => {
+export const getStaticProps: GetStaticProps<
+  MicroCMSListResponse<Blog>
+> = async (ctx) => {
   const data = await client.getList({
     endpoint: "blog",
   });

@@ -1,11 +1,12 @@
-import Head from "next/head";
+import Head from "node_modules/next/head";
+import { FC } from "react";
 import { Footer } from "src/components/Footer";
-import { Introduction } from "src/components/Introduction";
-import { Links } from "src/components/Links";
+import { Introduction } from "src/components/Introduction/Introduction";
+import { Links } from "src/components/Links/Links";
+
 import classes from "src/styles/Home.module.css";
 
-const Home = (props) => {
-  console.log(props.contents);
+const Home: FC = () => {
   return (
     <div className={classes.home}>
       <Head>

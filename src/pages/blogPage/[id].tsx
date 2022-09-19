@@ -5,8 +5,13 @@ import { client } from "src/lib/client";
 import classes from "./id.module.css";
 import dayjs from "dayjs";
 import { Footer } from "src/components/Footer";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { Blog } from "../blog";
+import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
 
-const BlogId = (props) => {
+type Props = Blog & MicroCMSContentId & MicroCMSDate;
+
+const BlogId: NextPage<Props> = (props) => {
   return (
     <div>
       <Head>
@@ -15,7 +20,7 @@ const BlogId = (props) => {
       <Header />
       <div className={classes.blogWrapper}>
         <h1 className={classes.blogTitle}>{props.title}</h1>
-        <time dateTime={props.pblisheaAt}>
+        <time dateTime={props.publishedAt}>
           {dayjs(props.publishedAt).format("投稿日:YYYY年MM月DD日")}
         </time>
         <div
@@ -31,7 +36,7 @@ const BlogId = (props) => {
   );
 };
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
   const data = await client.getList({ endpoint: "blog" });
   const ids = data.contents.map((content) => `/blogPage/${content.id}`);
   return {
@@ -40,8 +45,13 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async (ctx) => {
-  const data = await client.getListDetail({
+export const getStaticProps: GetStaticProps<{}, { id: string }> = async (
+  ctx
+) => {
+  if (!ctx.params) {
+    return { notFound: true };
+  }
+  const data = await client.getListDetail<Blog>({
     endpoint: "blog",
     contentId: ctx.params.id,
   });

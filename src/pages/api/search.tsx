@@ -1,6 +1,7 @@
+import { NextApiRequest, NextApiResponse } from "next";
 import { client } from "src/lib/client";
 
-const handler = async (req, res) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const data = await client.getList({
     endpoint: "blog",
     queries: { q: req.body.q },
