@@ -4,7 +4,6 @@ import { client } from "src/lib/client";
 import { Header } from "src/components/Header";
 import { useState } from "react";
 import Head from "next/head";
-import { Footer } from "src/components/Footer";
 import { GetStaticProps, NextPage } from "next";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import { ComponentProps } from "react";
@@ -77,7 +76,6 @@ const Blog: NextPage<MicroCMSListResponse<Blog>> = (props) => {
           })}
         </ul>
       </main>
-      <Footer />
     </>
   );
 };

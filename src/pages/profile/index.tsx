@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
 import { MyProfile } from "src/components/MyProfile";
 
@@ -11,7 +10,6 @@ const Profile = () => {
       </Head>
       <Header />
       <MyProfile />
-      <Footer />
     </>
   );
 };

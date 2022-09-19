@@ -1,6 +1,5 @@
 import Head from "node_modules/next/head";
 import { FC } from "react";
-import { Footer } from "src/components/Footer";
 import { Introduction } from "src/components/Introduction/Introduction";
 import { Links } from "src/components/Links/Links";
 
@@ -14,7 +13,6 @@ const Home: FC = () => {
       </Head>
       <Links />
       <Introduction />
-      <Footer />
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { FC } from "react";
-import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
 
 const Portfolio: FC = () => {
@@ -11,7 +10,6 @@ const Portfolio: FC = () => {
       </Head>
       <Header />
       <p>作成中...</p>
-      <Footer />
     </>
   );
 };

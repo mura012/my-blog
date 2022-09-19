@@ -4,7 +4,6 @@ import { Header } from "src/components/Header";
 import { client } from "src/lib/client";
 import classes from "./id.module.css";
 import dayjs from "dayjs";
-import { Footer } from "src/components/Footer";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Blog } from "../blog";
 import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
@@ -31,7 +30,6 @@ const BlogId: NextPage<Props> = (props) => {
           <a className={classes.back}>戻る</a>
         </Link>
       </div>
-      <Footer />
     </div>
   );
 };
