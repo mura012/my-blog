@@ -11,7 +11,6 @@ type Nav = {
 
 export const Header = () => {
   const router = useRouter();
-  console.log(router);
   const NAVITEMS: Nav = [
     {
       link: "/",
