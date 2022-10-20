@@ -2,6 +2,7 @@ import classes from "./Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import Icon from "src/image/twittericon.png";
+import { useRouter } from "next/router";
 
 type Nav = {
   link: string;
@@ -9,22 +10,24 @@ type Nav = {
 }[];
 
 export const Header = () => {
+  const router = useRouter();
+  console.log(router);
   const NAVITEMS: Nav = [
     {
       link: "/",
-      text: "Home",
+      text: "home",
     },
     {
       link: "/blog",
-      text: "Blog",
+      text: "blog",
     },
     {
       link: "/portfolio",
-      text: "Portfolio",
+      text: "portfolio",
     },
     {
       link: "/profile",
-      text: "Profile",
+      text: "profile",
     },
   ];
 
@@ -41,18 +44,24 @@ export const Header = () => {
           />
         </div>
       </Link>
-      <nav className={classes.imageWrapper}>
-        <div className={classes.navLink}>
-          {NAVITEMS.map((navItem) => {
-            return (
-              <Link href={navItem.link} key={navItem.link}>
-                <a>
-                  <h2 className={classes.title}>{navItem.text}</h2>
-                </a>
-              </Link>
-            );
-          })}
-        </div>
+      <nav className={classes.navLink}>
+        {NAVITEMS.map((navItem) => {
+          return (
+            <Link href={navItem.link} key={navItem.link}>
+              <a
+                style={{
+                  borderBottom:
+                    navItem.link === router.pathname
+                      ? "2px solid rgb(192, 192, 192)"
+                      : undefined,
+                }}
+                className={classes.title}
+              >
+                <h2>{navItem.text}</h2>
+              </a>
+            </Link>
+          );
+        })}
       </nav>
     </header>
   );
