@@ -48,7 +48,13 @@ const Blog: NextPage<MicroCMSListResponse<Blog>> = (props) => {
       <Header />
       <main className={classes.wrapper}>
         <form onSubmit={handleSubmit} className={classes.submit}>
-          <input type="text" name="query" placeholder="検索" />
+          <input
+            type="text"
+            name="query"
+            placeholder="検索"
+            autoComplete="off"
+            style={{ outline: "none" }}
+          />
           <button>検索</button>
           <button type="reset" onClick={handleClick}>
             リセット
