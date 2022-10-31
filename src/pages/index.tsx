@@ -2,7 +2,6 @@ import Head from "node_modules/next/head";
 import { FC } from "react";
 import { Introduction } from "src/components/Introduction/Introduction";
 import { Links } from "src/components/Links/Links";
-
 import classes from "src/styles/Home.module.css";
 
 const Home: FC = () => {
