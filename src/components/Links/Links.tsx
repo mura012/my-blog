@@ -5,6 +5,7 @@ import blog from "src/image/creative.png";
 import portfolio from "src/image/light.png";
 import profile from "src/image/human.png";
 import Icon from "src/image/twittericon.png";
+import { PageLink } from "../PageLink/PageLink";
 
 export const Links = () => {
   return (
@@ -19,30 +20,9 @@ export const Links = () => {
         />
       </Link>
       <div className={classes.links}>
-        <Link href="/blog">
-          <div className={classes.linkWrapper}>
-            <a className={classes.link}>
-              <Image src={blog} alt="blog" width={150} height={120} />
-              <p>Blog</p>
-            </a>
-          </div>
-        </Link>
-        <Link href="/portfolio">
-          <div className={`${classes.linkWrapper} ${classes.center}`}>
-            <a className={`${classes.link} ${classes.center}`}>
-              <Image src={portfolio} alt="portfolio" width={90} height={120} />
-              <p>Portfolio</p>
-            </a>
-          </div>
-        </Link>
-        <Link href="/profile">
-          <div className={classes.linkWrapper}>
-            <a className={classes.link}>
-              <Image src={profile} alt="profile" width={100} height={120} />
-              <p>Profile</p>
-            </a>
-          </div>
-        </Link>
+        <PageLink href="blog" src={blog} />
+        <PageLink href="portfolio" src={portfolio} />
+        <PageLink href="profile" src={profile} />
       </div>
     </nav>
   );

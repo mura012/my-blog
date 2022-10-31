@@ -19,24 +19,6 @@
   margin-top: 30px;
   cursor: pointer;
 }
-.linkWrapper {
-  border: 2px solid rgb(192, 192, 192);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 200px;
-  background-color: rgb(128, 213, 247);
-}
-.linkWrapper:hover {
-  opacity: 0.7;
-}
-.link {
-  font-size: 30px;
-}
-.center {
-  margin: 0 1vw;
-}
 .wrapper {
   margin-top: 100px;
 }
@@ -52,8 +34,5 @@
   .links {
     display: flex;
     flex-direction: column;
-  }
-  .linkWrapper {
-    margin-top: 30px;
   }
 }
