@@ -1,8 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
 import classes from "./Introduction.module.css";
 import Twitter from "src/image/Twitter logo/PNG/2021 Twitter logo - white.png";
 import Git from "src/image/github_icon.png";
+import MyLinkButton from "../MyLinkButton/MyLinkButton";
 
 export const Introduction = () => {
   return (
@@ -10,28 +9,16 @@ export const Introduction = () => {
       <h1>武良 (most_love)</h1>
 
       <div className={classes.wrapper}>
-        <Link href="https://twitter.com/most_love08">
-          <a className={classes.myPage}>
-            <Image
-              src={Twitter}
-              alt="twittericon"
-              width={30}
-              height={30}
-              className={classes.linkIcon}
-            />
-          </a>
-        </Link>
-        <Link href="https://github.com/mura012">
-          <a className={`${classes.myPage} ${classes.git}`}>
-            <Image
-              src={Git}
-              alt="giticon"
-              width={35}
-              height={35}
-              className={classes.linkIcon}
-            />
-          </a>
-        </Link>
+        <MyLinkButton
+          href="https://twitter.com/most_love08"
+          buttonColor="rgb(87, 163, 227)"
+          icon={Twitter}
+        />
+        <MyLinkButton
+          href="https://github.com/mura012"
+          buttonColor="gray"
+          icon={Git}
+        />
       </div>
     </div>
   );
