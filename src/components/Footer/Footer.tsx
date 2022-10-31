@@ -1,6 +1,7 @@
 import classes from "./Footer.module.css";
 
 export const Footer = () => {
+  const date = new Date();
   return (
     <footer className={classes.footer}>
       <div className={classes.footerWrapper}>
@@ -14,7 +15,7 @@ export const Footer = () => {
           </a>
           にお願いします。
         </p>
-        <p className={classes.copyright}>©武良</p>
+        <p className={classes.copyright}>© {date.getFullYear()} 武良</p>
       </div>
     </footer>
   );
