@@ -13,7 +13,7 @@ export const PageLink = ({ href, src }: Props) => {
       <div className={classes.linkWrapper}>
         <a>
           <Image src={src} alt={href} width={120} height={120} />
-          <p>Blog</p>
+          <p style={{ textTransform: "capitalize" }}>{href}</p>
         </a>
       </div>
     </Link>

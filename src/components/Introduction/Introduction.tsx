@@ -6,7 +6,7 @@ import { MyLinkButton } from "src/components/MyLinkButton";
 export const Introduction = () => {
   return (
     <div className={classes.introduction}>
-      <h1>武良 (most_love)</h1>
+      <h1>武良 (@most_love)</h1>
 
       <div className={classes.wrapper}>
         <MyLinkButton

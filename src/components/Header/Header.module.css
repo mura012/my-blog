@@ -2,17 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 5vw;
   border-bottom: 2px solid rgb(192, 192, 192);
 }
-
 .image {
   border-radius: 400px;
   cursor: pointer;
 }
 .navLink {
   margin-right: 5vw;
-  display: flex;
 }
 .title {
   display: inline-block;

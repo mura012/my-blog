@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import classes from "./Links.module.css";
 import blog from "src/image/creative.png";
 import portfolio from "src/image/light.png";
@@ -10,15 +9,13 @@ import { PageLink } from "src/components/PageLink";
 export const Links = () => {
   return (
     <nav className={classes.nav}>
-      <Link href="/">
-        <Image
-          src={Icon}
-          alt="icon"
-          width={80}
-          height={80}
-          className={classes.icon}
-        />
-      </Link>
+      <Image
+        src={Icon}
+        alt="icon"
+        width={80}
+        height={80}
+        className={classes.icon}
+      />
       <div className={classes.links}>
         <PageLink href="blog" src={blog} />
         <PageLink href="portfolio" src={portfolio} />
