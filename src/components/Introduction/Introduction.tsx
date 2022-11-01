@@ -1,7 +1,7 @@
 import classes from "./Introduction.module.css";
 import Twitter from "src/image/Twitter logo/PNG/2021 Twitter logo - white.png";
 import Git from "src/image/github_icon.png";
-import MyLinkButton from "../MyLinkButton/MyLinkButton";
+import { MyLinkButton } from "src/components/MyLinkButton";
 
 export const Introduction = () => {
   return (

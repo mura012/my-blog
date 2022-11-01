@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import classes from "./MyLinkButton.module.css";
@@ -9,7 +9,7 @@ type Props = {
   icon: any;
 };
 
-const MyLinkButton = ({ href, buttonColor, icon }: Props) => {
+export const MyLinkButton = ({ href, buttonColor, icon }: Props) => {
   return (
     <Link href={href}>
       <a className={classes.myPage} style={{ backgroundColor: buttonColor }}>
@@ -18,5 +18,3 @@ const MyLinkButton = ({ href, buttonColor, icon }: Props) => {
     </Link>
   );
 };
-
-export default MyLinkButton;

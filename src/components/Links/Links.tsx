@@ -5,7 +5,7 @@ import blog from "src/image/creative.png";
 import portfolio from "src/image/light.png";
 import profile from "src/image/human.png";
 import Icon from "src/image/twittericon.png";
-import { PageLink } from "../PageLink/PageLink";
+import { PageLink } from "src/components/PageLink";
 
 export const Links = () => {
   return (
