@@ -60,14 +60,12 @@ const Blog: NextPage<MicroCMSListResponse<Blog>> = (props) => {
             リセット
           </button>
         </form>
-        <p className={classes.total}>{`${
-          search ? "検索結果" : "記事の総数"
-        }: ${totalCount}件`}</p>
+        <p>{`${search ? "検索結果" : "記事の総数"}: ${totalCount}件`}</p>
         <ul>
           {contents.map((content) => {
             return (
               <li key={content.id} className={classes.linkWrapper}>
-                <Link href={`/blogPage/${content.id}`} className={classes.link}>
+                <Link href={`/blogPage/${content.id}`}>
                   <a className={classes.linkAnchor}>
                     <img
                       src={content.image.url}

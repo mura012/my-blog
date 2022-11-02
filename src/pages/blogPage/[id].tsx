@@ -18,7 +18,7 @@ const BlogId: NextPage<Props> = (props) => {
       </Head>
       <Header />
       <div className={classes.blogWrapper}>
-        <h1 className={classes.blogTitle}>{props.title}</h1>
+        <h1>{props.title}</h1>
         <time dateTime={props.publishedAt}>
           {dayjs(props.publishedAt).format("投稿日:YYYY年MM月DD日")}
         </time>
