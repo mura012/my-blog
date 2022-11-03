@@ -22,3 +22,9 @@
   color: #ff0000;
   text-decoration: underline;
 }
+
+.shareTwitter {
+  padding: 6px;
+  border-radius: 12px;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.6));
+}

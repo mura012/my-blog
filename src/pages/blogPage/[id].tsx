@@ -7,6 +7,8 @@ import dayjs from "dayjs";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Blog } from "../blog";
 import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
+import Image from "next/image";
+import Twitter from "src/image/Twitter logo/PNG/2021 Twitter logo - blue.png";
 
 type Props = Blog & MicroCMSContentId & MicroCMSDate;
 
@@ -26,6 +28,17 @@ const BlogId: NextPage<Props> = (props) => {
       </Head>
       <Header />
       <div className={classes.blogWrapper}>
+        <a
+          href={`http://twitter.com/share?url=https://www.mura-mostlove.com/blogPage/${props.id}&via=most_love08`}
+          data-show-count="false"
+          target="_blank"
+          className={classes.shareTwitter}
+        >
+          <Image src={Twitter} alt="icon" width={20} height={20} />
+          Share
+        </a>
+        <script async src="https://platform.twitter.com/widgets.js" />
+
         <h1>{props.title}</h1>
         <time dateTime={props.publishedAt}>
           {dayjs(props.publishedAt).format("投稿日:YYYY年MM月DD日")}
