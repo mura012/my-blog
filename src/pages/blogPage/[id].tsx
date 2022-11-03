@@ -15,6 +15,14 @@ const BlogId: NextPage<Props> = (props) => {
     <div>
       <Head>
         <title>{props.title}</title>
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content={`https://www.mura-mostlove.com/blogPage/${props.id}`}
+        />
+        <meta property="og:img" content={props.image.url} />
+        <meta property="og:title" content={props.title} />
+        <meta name="twitter:card" content="summary" />
       </Head>
       <Header />
       <div className={classes.blogWrapper}>
