@@ -7,6 +7,7 @@ import Head from "next/head";
 import { GetStaticProps, NextPage } from "next";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import { ComponentProps } from "react";
+import { Loading } from "src/components/Loading/Loading";
 
 export type Blog = {
   id: string;
@@ -19,8 +20,10 @@ export type Blog = {
 
 const Blog: NextPage<MicroCMSListResponse<Blog>> = (props) => {
   const [search, setSearch] = useState<MicroCMSListResponse<Blog>>();
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleSubmit: ComponentProps<"form">["onSubmit"] = async (event) => {
+    setLoading(true);
     // イベントのデフォルトの挙動をキャンセル
     event.preventDefault();
     const q = event.currentTarget.query.value;
@@ -31,6 +34,7 @@ const Blog: NextPage<MicroCMSListResponse<Blog>> = (props) => {
     });
     const json = await data.json();
     json.contents != 0 ? setSearch(json) : alert("検索結果がありません");
+    setLoading(false);
   };
 
   const handleClick: ComponentProps<"button">["onClick"] = () => {
@@ -60,25 +64,31 @@ const Blog: NextPage<MicroCMSListResponse<Blog>> = (props) => {
             リセット
           </button>
         </form>
-        <p>{`${search ? "検索結果" : "記事の総数"}: ${totalCount}件`}</p>
-        <ul>
-          {contents.map((content) => {
-            return (
-              <li key={content.id} className={classes.linkWrapper}>
-                <Link href={`/blogPage/${content.id}`}>
-                  <a className={classes.linkAnchor}>
-                    <img
-                      src={content.image.url}
-                      alt="画像"
-                      className={classes.linkImage}
-                    />
-                    {content.title}
-                  </a>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <p>{`${
+          loading ? "検索中" : search ? "検索結果" : "記事の総数"
+        }: ${totalCount}件`}</p>
+        {loading ? (
+          <Loading />
+        ) : (
+          <ul>
+            {contents.map((content) => {
+              return (
+                <li key={content.id} className={classes.linkWrapper}>
+                  <Link href={`/blogPage/${content.id}`}>
+                    <a className={classes.linkAnchor}>
+                      <img
+                        src={content.image.url}
+                        alt="画像"
+                        className={classes.linkImage}
+                      />
+                      {content.title}
+                    </a>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        )}
       </main>
     </>
   );
