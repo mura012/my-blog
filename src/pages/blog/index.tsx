@@ -7,7 +7,7 @@ import Head from "next/head";
 import { GetStaticProps, NextPage } from "next";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import { ComponentProps } from "react";
-import { Loading } from "src/components/Loading/Loading";
+import { Loading } from "src/components/Loading";
 
 export type Blog = {
   id: string;
