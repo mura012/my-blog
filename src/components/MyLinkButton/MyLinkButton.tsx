@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
 import classes from "./MyLinkButton.module.css";
@@ -6,7 +6,7 @@ import classes from "./MyLinkButton.module.css";
 type Props = {
   href: string;
   buttonColor: string;
-  icon: any;
+  icon: StaticImageData;
 };
 
 export const MyLinkButton = ({ href, buttonColor, icon }: Props) => {
