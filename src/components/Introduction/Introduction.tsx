@@ -13,11 +13,15 @@ export const Introduction = () => {
           href="https://twitter.com/most_love08"
           buttonColor="rgb(87, 163, 227)"
           icon={Twitter}
+          width={35}
+          height={30}
         />
         <MyLinkButton
           href="https://github.com/mura012"
           buttonColor="gray"
           icon={Git}
+          width={40}
+          height={40}
         />
       </div>
     </div>
