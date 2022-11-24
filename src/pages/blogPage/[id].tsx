@@ -8,7 +8,6 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Blog } from "../blog";
 import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
 import Image from "next/image";
-import Twitter from "src/image/Twitter logo/PNG/2021 Twitter logo - blue.png";
 
 type Props = Blog & MicroCMSContentId & MicroCMSDate;
 
@@ -34,7 +33,12 @@ const BlogId: NextPage<Props> = (props) => {
           target="_blank"
           className={classes.shareTwitter}
         >
-          <Image src={Twitter} alt="icon" width={20} height={20} />
+          <Image
+            src="/image/Twitter logo/PNG/2021 Twitter logo - blue.png"
+            alt="icon"
+            width={20}
+            height={20}
+          />
           Share
         </a>
         <script async src="https://platform.twitter.com/widgets.js" />
