@@ -56,7 +56,7 @@ export const Header = () => {
                 }}
                 className={classes.title}
               >
-                <h2>{navItem.text}</h2>
+                <h2 className={classes.text}>{navItem.text}</h2>
               </a>
             </Link>
           );
