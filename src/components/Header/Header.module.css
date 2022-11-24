@@ -11,14 +11,14 @@
 .navLink {
   margin-right: 5vw;
 }
-.title {
+.text {
   display: inline-block;
   padding: 0 1vw;
   cursor: pointer;
   transition: 0.3s;
   text-transform: capitalize;
 }
-.title:hover {
+.text:hover {
   border-bottom: 2px solid rgb(192, 192, 192);
   opacity: 0.5;
 }
@@ -29,5 +29,9 @@
   }
   .linkInImageWrapper {
     display: none;
+  }
+  .text::after {
+    content: "|";
+    margin-left: 3px;
   }
 }
