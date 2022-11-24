@@ -1,6 +1,4 @@
 import classes from "./Introduction.module.css";
-import Twitter from "src/image/Twitter logo/PNG/2021 Twitter logo - white.png";
-import Git from "src/image/github_icon.png";
 import { MyLinkButton } from "src/components/MyLinkButton";
 
 export const Introduction = () => {
@@ -12,14 +10,14 @@ export const Introduction = () => {
         <MyLinkButton
           href="https://twitter.com/most_love08"
           buttonColor="rgb(87, 163, 227)"
-          icon={Twitter}
+          icon="/image/Twitter logo/PNG/2021 Twitter logo - white.png"
           width={35}
           height={30}
         />
         <MyLinkButton
           href="https://github.com/mura012"
           buttonColor="gray"
-          icon={Git}
+          icon="/image/github_icon.png"
           width={40}
           height={40}
         />

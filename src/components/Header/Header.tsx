@@ -1,7 +1,6 @@
 import classes from "./Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import Icon from "src/image/twittericon.png";
 import { useRouter } from "next/router";
 
 type Nav = {
@@ -35,7 +34,7 @@ export const Header = () => {
       <Link href="/">
         <div className={classes.linkInImageWrapper}>
           <Image
-            src={Icon}
+            src="/image/twittericon.png"
             alt="icon"
             className={classes.image}
             width={80}

@@ -1,18 +1,18 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import classes from "./PageLink.module.css";
 
 type Props = {
   href: string;
-  src: StaticImageData;
+  img: string;
 };
 
-export const PageLink = ({ href, src }: Props) => {
+export const PageLink = ({ href, img }: Props) => {
   return (
     <Link href={`/${href}`}>
       <div className={classes.linkWrapper}>
         <a>
-          <Image src={src} alt={href} width={120} height={120} />
+          <Image src={img} alt={href} width={120} height={120} />
           <p style={{ textTransform: "capitalize" }}>{href}</p>
         </a>
       </div>
