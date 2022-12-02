@@ -1,13 +1,12 @@
 import Link from "next/link";
 import classes from "./blog.module.css";
 import { client } from "src/lib/client";
-import { Header } from "src/components/Header";
 import { useState } from "react";
-import Head from "next/head";
 import { GetStaticProps, NextPage } from "next";
 import { MicroCMSListResponse } from "microcms-js-sdk";
 import { ComponentProps } from "react";
 import { Loading } from "src/components/Loading";
+import { Layout } from "src/layout";
 
 export type Blog = {
   id: string;
@@ -45,11 +44,7 @@ const Blog: NextPage<MicroCMSListResponse<Blog>> = (props) => {
   const totalCount = search ? search.totalCount : props.totalCount;
 
   return (
-    <>
-      <Head>
-        <title>myblog</title>
-      </Head>
-      <Header />
+    <Layout title="ブログ">
       <main className={classes.wrapper}>
         <form onSubmit={handleSubmit} className={classes.submit}>
           <input
@@ -90,7 +85,7 @@ const Blog: NextPage<MicroCMSListResponse<Blog>> = (props) => {
           </ul>
         )}
       </main>
-    </>
+    </Layout>
   );
 };
 

@@ -28,6 +28,3 @@ h1 {
 * {
   box-sizing: border-box;
 }
-.global {
-  min-height: 85vh;
-}

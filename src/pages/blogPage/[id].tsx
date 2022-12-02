@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Head from "next/head";
-import { Header } from "src/components/Header";
 import { client } from "src/lib/client";
 import classes from "./id.module.css";
 import dayjs from "dayjs";
@@ -8,12 +7,13 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Blog } from "../blog";
 import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
 import Image from "next/image";
+import { Layout } from "src/layout";
 
 type Props = Blog & MicroCMSContentId & MicroCMSDate;
 
 const BlogId: NextPage<Props> = (props) => {
   return (
-    <div>
+    <Layout>
       <Head>
         <title>{props.title}</title>
         <meta property="og:type" content="article" />
@@ -25,7 +25,6 @@ const BlogId: NextPage<Props> = (props) => {
         <meta property="og:title" content={props.title} />
         <meta name="twitter:card" content="summary" />
       </Head>
-      <Header />
       <div className={classes.blogWrapper}>
         <a
           href={`http://twitter.com/share?url=https://www.mura-mostlove.com/blogPage/${props.id}&via=most_love08`}
@@ -55,7 +54,7 @@ const BlogId: NextPage<Props> = (props) => {
           <a className={classes.back}>戻る</a>
         </Link>
       </div>
-    </div>
+    </Layout>
   );
 };
 

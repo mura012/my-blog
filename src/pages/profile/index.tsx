@@ -1,16 +1,11 @@
-import Head from "next/head";
-import { Header } from "src/components/Header";
 import { MyProfile } from "src/components/MyProfile";
+import { Layout } from "src/layout";
 
 const Profile = () => {
   return (
-    <>
-      <Head>
-        <title>profile</title>
-      </Head>
-      <Header />
+    <Layout title="プロフィール">
       <MyProfile />
-    </>
+    </Layout>
   );
 };
 
