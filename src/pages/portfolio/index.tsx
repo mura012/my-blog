@@ -1,16 +1,64 @@
-import Head from "next/head";
+import { imageConfigDefault } from "next/dist/shared/lib/image-config";
+import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
-import { Header } from "src/components/Header";
+import { Layout } from "src/layout";
+import classes from "./portfolio.module.css";
+
+type Props = {
+  id: number;
+  title: string;
+  text: string;
+  link: string;
+  img: string;
+  imgShape: "square" | "rectangle";
+};
+
+const PortfolioData: Props[] = [
+  {
+    id: 1,
+    title: "UIbooks",
+    text: "いろいろなUIを実装しました",
+    link: "https://u-ibooks.vercel.app/",
+    img: "/image/UIbook.PNG",
+    imgShape: "rectangle",
+  },
+  {
+    id: 2,
+    title: "my-blog",
+    text: "ブログサイトとして作っていたけどプロフィールなどもあってポートフォリオサイトになりました",
+    link: "/",
+    img: "/image/my-blog.PNG",
+    imgShape: "square",
+  },
+];
 
 const Portfolio: FC = () => {
   return (
-    <>
-      <Head>
-        <title>portfolio</title>
-      </Head>
-      <Header />
-      <p>作成中...</p>
-    </>
+    <Layout title="ポートフォリオ">
+      <ul>
+        {PortfolioData.map((data) => {
+          return (
+            <li key={data.id} style={{ listStyle: "none" }}>
+              <Link href={data.link}>
+                <a className={classes.portfolioWrapper}>
+                  <div className={classes.dataText}>
+                    <h3>{data.title}</h3>
+                    <p>{data.text}</p>
+                  </div>
+                  <Image
+                    src={data.img}
+                    width={data.imgShape === "rectangle" ? 240 : 160}
+                    height={data.imgShape === "rectangle" ? 120 : 160}
+                    className={classes.dataImg}
+                  />
+                </a>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </Layout>
   );
 };
 
