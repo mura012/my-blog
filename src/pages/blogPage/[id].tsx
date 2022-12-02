@@ -6,8 +6,8 @@ import dayjs from "dayjs";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Blog } from "../blog";
 import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
-import Image from "next/image";
 import { Layout } from "src/layout";
+import { IconBrandTwitter } from "@tabler/icons";
 
 type Props = Blog & MicroCMSContentId & MicroCMSDate;
 
@@ -32,13 +32,8 @@ const BlogId: NextPage<Props> = (props) => {
           target="_blank"
           className={classes.shareTwitter}
         >
-          <Image
-            src="/image/Twitter logo/PNG/2021 Twitter logo - blue.png"
-            alt="icon"
-            width={20}
-            height={20}
-          />
-          Share
+          <IconBrandTwitter />
+          <p>Share</p>
         </a>
         <script async src="https://platform.twitter.com/widgets.js" />
 
