@@ -1,5 +1,6 @@
 import classes from "./Introduction.module.css";
 import { MyLinkButton } from "src/components/MyLinkButton";
+import { IconBrandTwitter, IconBrandGithub } from "@tabler/icons";
 
 export const Introduction = () => {
   return (
@@ -10,16 +11,12 @@ export const Introduction = () => {
         <MyLinkButton
           href="https://twitter.com/most_love08"
           buttonColor="rgb(87, 163, 227)"
-          icon="/image/Twitter logo/PNG/2021 Twitter logo - white.png"
-          width={35}
-          height={30}
+          icon={<IconBrandTwitter width={35} height={35} />}
         />
         <MyLinkButton
           href="https://github.com/mura012"
           buttonColor="gray"
-          icon="/image/github_icon.png"
-          width={40}
-          height={40}
+          icon={<IconBrandGithub width={35} height={35} />}
         />
       </div>
     </div>

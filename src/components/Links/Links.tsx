@@ -1,6 +1,7 @@
 import Image from "next/image";
 import classes from "./Links.module.css";
 import { PageLink } from "src/components/PageLink";
+import { IconArticle, IconEyeglass, IconUserCircle } from "@tabler/icons";
 
 export const Links = () => {
   return (
@@ -13,9 +14,15 @@ export const Links = () => {
         className={classes.icon}
       />
       <div className={classes.links}>
-        <PageLink href="blog" img="/image/creative.png" />
-        <PageLink href="portfolio" img="/image/light.png" />
-        <PageLink href="profile" img="/image/human.png" />
+        <PageLink href="blog" icon={<IconArticle width={130} height={130} />} />
+        <PageLink
+          href="portfolio"
+          icon={<IconEyeglass width={130} height={130} />}
+        />
+        <PageLink
+          href="profile"
+          icon={<IconUserCircle width={130} height={130} />}
+        />
       </div>
     </nav>
   );
