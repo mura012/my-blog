@@ -31,7 +31,6 @@
     display: none;
   }
   .text::after {
-    content: "|";
     margin-left: 3px;
   }
 }
