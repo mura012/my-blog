@@ -18,6 +18,9 @@
 }
 .linkAnchor {
   font-weight: bold;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 .linkImage {
   display: block;
