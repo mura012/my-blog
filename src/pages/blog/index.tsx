@@ -7,6 +7,7 @@ import { MicroCMSListResponse } from "microcms-js-sdk";
 import { ComponentProps } from "react";
 import { Loading } from "src/components/Loading";
 import { Layout } from "src/layout";
+import Image from "next/image";
 
 export type Blog = {
   id: string;
@@ -69,12 +70,17 @@ const Blog: NextPage<MicroCMSListResponse<Blog>> = (props) => {
             {contents.map((content) => {
               return (
                 <li key={content.id} className={classes.linkWrapper}>
-                  <Link href={`/blogPage/${content.id}`}>
+                  <Link
+                    href={`/blogPage/${content.id}`}
+                    style={{ backgroundColor: "red" }}
+                  >
                     <a className={classes.linkAnchor}>
-                      <img
+                      <Image
                         src={content.image.url}
                         alt="画像"
                         className={classes.linkImage}
+                        width={160}
+                        height={120}
                       />
                       {content.title}
                     </a>
