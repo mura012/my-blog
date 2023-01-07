@@ -15,9 +15,11 @@ export const Layout = ({ children, title = "mura-mostlove" }: Props) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <Header />
-      <div className={classes.wrapper}>{children}</div>
-      <Footer />
+      <div className={classes.wrapper}>
+        <Header />
+        <div className={classes.childrenWrapper}>{children}</div>
+        <Footer />
+      </div>
     </>
   );
 };
