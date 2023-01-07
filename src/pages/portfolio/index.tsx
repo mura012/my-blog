@@ -17,11 +17,11 @@ type Props = {
 const PortfolioData: Props[] = [
   {
     id: 1,
-    title: "UIbooks",
-    text: "いろいろなUIを実装しました",
-    link: "https://u-ibooks.vercel.app/",
-    img: "/image/UIbook.PNG",
-    imgShape: "rectangle",
+    title: "pokeRGBY",
+    text: "ポケモン赤青緑ピカチュー版で旅をするときに欲しかったツールを開発しました",
+    link: "https://pokemon-type.vercel.app/",
+    img: "/image/pokemonRGBY.PNG",
+    imgShape: "square",
   },
   {
     id: 2,
@@ -30,6 +30,14 @@ const PortfolioData: Props[] = [
     link: "/",
     img: "/image/my-blog.PNG",
     imgShape: "square",
+  },
+  {
+    id: 3,
+    title: "UIbooks",
+    text: "いろいろなUIを実装しました",
+    link: "https://u-ibooks.vercel.app/",
+    img: "/image/UIbook.PNG",
+    imgShape: "rectangle",
   },
 ];
 
