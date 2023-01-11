@@ -7,7 +7,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Blog } from "../blog";
 import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
 import { Layout } from "src/layout";
-import { IconBrandTwitter } from "@tabler/icons";
+import { IconArrowBack, IconBrandTwitter } from "@tabler/icons";
 
 type Props = Blog & MicroCMSContentId & MicroCMSDate;
 
@@ -46,7 +46,12 @@ const BlogId: NextPage<Props> = (props) => {
           className={classes.body}
         />
         <Link href="/blog">
-          <a className={classes.back}>戻る</a>
+          <a className={classes.back}>
+            <div className={classes.backButton}>
+              <IconArrowBack />
+              <p>戻る</p>
+            </div>
+          </a>
         </Link>
       </div>
     </Layout>
