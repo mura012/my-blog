@@ -7,6 +7,7 @@
   padding-top: 10px;
   padding-left: 30px;
   padding-right: 30px;
+  padding-bottom: 30px;
 }
 .body {
   line-height: 1.9;
@@ -14,6 +15,8 @@
 .back {
   color: #0000ee;
   text-decoration: underline;
+  display: flex;
+  padding: 10px;
 }
 .back:hover {
   color: #ff0000;
@@ -32,7 +35,6 @@
   width: 70px;
 }
 
-.backButton {
-  display: flex;
-  padding: 10px;
+.backWrapper {
+  width: fit-content;
 }

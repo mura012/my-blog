@@ -3,6 +3,13 @@
   max-width: 800px;
   margin: 0 auto;
 }
+.ruby {
+  width: 64px;
+  text-align: center;
+  height: 15px;
+  margin-top: 10px;
+  font-size: 12px;
+}
 .job {
   margin-left: 30px;
 }
@@ -12,6 +19,7 @@
 }
 .name {
   margin-bottom: 0;
+  width: fit-content;
 }
 .ol {
   list-style: none;
@@ -20,4 +28,7 @@
 .text {
   margin-left: 30px;
   margin-bottom: 20px;
+}
+.text:before {
+  content: "▶";
 }

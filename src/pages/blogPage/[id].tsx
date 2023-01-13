@@ -45,14 +45,14 @@ const BlogId: NextPage<Props> = (props) => {
           dangerouslySetInnerHTML={{ __html: props.body }}
           className={classes.body}
         />
-        <Link href="/blog">
-          <a className={classes.back}>
-            <div className={classes.backButton}>
+        <div className={classes.backWrapper}>
+          <Link href="/blog">
+            <a className={classes.back}>
               <IconArrowBack />
               <p>戻る</p>
-            </div>
-          </a>
-        </Link>
+            </a>
+          </Link>
+        </div>
       </div>
     </Layout>
   );
