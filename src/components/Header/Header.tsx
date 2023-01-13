@@ -6,11 +6,11 @@ import { useRouter } from "next/router";
 type Nav = {
   link: string;
   text: string;
-}[];
+};
 
 export const Header = () => {
   const router = useRouter();
-  const NAVITEMS: Nav = [
+  const NAVITEMS: Nav[] = [
     {
       link: "/",
       text: "home",
