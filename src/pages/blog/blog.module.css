@@ -12,9 +12,7 @@
   margin-bottom: -1px;
 }
 .linkWrapper:hover {
-  transition: 0.5s;
-  box-shadow: 0 5px 5px gray;
-  margin-bottom: 5px;
+  color: red;
 }
 .linkAnchor {
   font-weight: bold;
