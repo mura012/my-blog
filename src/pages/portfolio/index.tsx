@@ -19,7 +19,7 @@ const PortfolioData: Props[] = [
     id: 1,
     title: "pokeRGBY",
     text: "ポケモン赤青緑ピカチュー版で旅をするときに欲しかったツールを開発しました",
-    link: "https://pokemon-type.vercel.app/",
+    link: "https://www.pokergbytools.com/",
     img: "/image/pokemonRGBY.PNG",
     imgShape: "square",
   },
